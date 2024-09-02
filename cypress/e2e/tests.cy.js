@@ -198,17 +198,15 @@ it('Login functionality using valid username or valid password with space prefix
         })
 
 })
-
 })
 
-it('Login functionality using valid username or valid password with space sufix', ()=>{
+it('Login functionality using valid username with space sufix and valid password', ()=>{
     cy.get('@testData').then((testData)=>{  
         const testDataArr = testData.loginCredentialsSpacesAfter;
 
-        testDataArr.forEach((data)=>{
      
-        Base.loginUserName(data.userName);
-        Base.loginPassword(data.password);
+        Base.loginUserName(testDataArr[1].userName);
+        Base.loginPassword(testDataArr[1].password);
         Base.login();
 
         cy.wait(1000); 
@@ -219,11 +217,28 @@ it('Login functionality using valid username or valid password with space sufix'
         Base.passwordInput().should('be.visible');
         Base.userNameInput().should('be.visible');
         Base.loginErrorMessage().should('be.visible').should('contain', 'Invalid username or password!')
+        
+})
+})
 
-        //Clear login inputs
-        Base.clearLogin();
-        })
+it('Login functionality using valid username and valid password with space sufix', ()=>{
+    cy.get('@testData').then((testData)=>{  
+        const testDataArr = testData.loginCredentialsSpacesAfter;
 
+     
+        Base.loginUserName(testDataArr[0].userName);
+        Base.loginPassword(testDataArr[0].password);
+        Base.login();
+
+        cy.wait(1000); 
+ 
+        //Assertions
+        cy.url().should('contain', '/login');
+        Base.loginPageHeader().should('be.visible');
+        Base.passwordInput().should('be.visible');
+        Base.userNameInput().should('be.visible');
+        Base.loginErrorMessage().should('be.visible').should('contain', 'Invalid username or password!')
+        
 })
 })
 
@@ -278,7 +293,7 @@ it('Log in functionality using valid user name and valid password from deactivat
     cy.wait(1000)
     cy.get('@testData').then((testData)=>{  
         cy.visit(baseURL);
-        const testDataArr = testData.validLoginCredentials;
+        const testDataArr = testData.validLoginCredentialsDeact;
 
         Base.loginUserName(testDataArr[0].userName);
         Base.loginPassword(testDataArr[0].password);
@@ -291,8 +306,29 @@ it('Log in functionality using valid user name and valid password from deactivat
         Base.userNameInput().should('be.visible');
         Base.loginErrorMessage().should('be.visible').should('contain', 'Invalid username or password!')
 
+})
+})
+
+it('Verify the login with valid extensive long user name', ()=>{
+
+
+    cy.wait(1000)
+    cy.get('@testData').then((testData)=>{  
+        const testDataArr = testData.validLoginCredentialsUserNameTooLong;
+
+        Base.loginUserName(testDataArr[0].userName);
+        Base.loginPassword(testDataArr[0].password);
+        Base.login();
+ 
+        //Assertions
+        cy.url().should('contain', '/login');
+        Base.loginPageHeader().should('be.visible');
+        Base.passwordInput().should('be.visible');
+        Base.userNameInput().should('be.visible');
+        Base.loginErrorMessage().should('be.visible').should('contain', 'Invalid username or password!');
 
 })
 })
+
 
 })

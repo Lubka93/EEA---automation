@@ -51,7 +51,7 @@ class Main {
   cy.fixture('testData.json').as('testData');
 
   cy.get('@testData').then((testData)=>{
-    const testDataArr = testData.validLoginCredentials;
+    const testDataArr = testData.validLoginCredentialsDeact;
 
     this.loginUserName(testDataArr[0].userName)
     this.loginPassword(testDataArr[0].password)

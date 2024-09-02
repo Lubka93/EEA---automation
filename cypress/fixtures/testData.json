@@ -1,6 +1,7 @@
 {
-  "registrationCredentials": [{"firstName": "Lubka", "lastName": "Doe", "userName": "lubka123", "password": "Lubka123@"}],
   "validLoginCredentials": [{"userName": "lubka123", "password": "Lubka123@"}],
+  "validLoginCredentialsDeact": [{"userName": "lubka456", "password": "Lubka456@"}],
+  "validLoginCredentialsUserNameTooLong": [{"userName": "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww", "password": "Lubka123@"}],
   "invalidLoginCredentials": [
     {"userName": "lubka124", "password": "Lubka123@"},
     {"userName": "lubka123", "password": "Lubka124@"},
