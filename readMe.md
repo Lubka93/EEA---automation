@@ -1,40 +1,57 @@
-## E2E Cypress e2e tests for Option 1
+## Login functionality testing
 
-#### Tests are written for webapp Tour Of Heroes
+#### Tests are written for web app https://demoqa.com/login
 
-I prepared simple e2e tests which should all basic parts  of the web app. I focused on main navigation paths based on documentaion at Angular webpage and my actual interaction with app. I also focused on testing main functionalities, where I covered positive and also negative test cases.
+I automated all test cases for login functionality from excel file [Login functionality  - Test cases]().
 
-#### Demo presentation is avalaible on google drive: [Tour of Heroes Demo presentation](https://docs.google.com/presentation/d/1fJtld8q8LFKTQj16byG_YtMymk_CxKSI/edit?usp=sharing&ouid=112772196783359617351&rtpof=true&sd=true)
+##Precondition:
+-
+**!!! Before each automated test suite run, it is necessary to manually register at https://demoqa.com/register using the following credentials:**
+
+- **First Name: Lubka**
+- **Last Name: Doe**
+- **Username: lubka123**
+- **Password: Lubka123@**
+
+**Run Cypress Tests:**
+
+- 1. **To run all tests in headless mode**
+        ```bash
+        npm run runner
+        ```
+- 2. **To run all tests in headed mode**
+        ```bash
+        npm run runnerH
+        ```
+
+**Report
+-
+The automatically generated test report (using Mochawesome) summarizes all failed tests and includes videos and screenshots. [Report from automation]()
 
 
-#### Cypress tests are written using JavaScript
 
-#### Relevant utilities which I used for creating testing enviroment:
+#### Cypress tests were written using JavaScript
+
+#### Relevant tools which I used for creating test enviroment:
 
 - Cypress version: 13.13.0
 - Node version: 20.9.0
 - npm version: 10.8.2 
-- cypress xpath: 2.0.3
 - vs studio code: 1.83.1
-- git: 2.43.0.windows.1
 - browser: chrome 128
-- OS - windows home 10
-
-#### Tour of Heroes
-Web app Tour Od Heroes is running locally at localhost. In order to run Tour of Heroes, I used command **npm run start**
-- it uses port 4200.
+- OS - windows home 11
 
 
-### Steps to Clone and Run e2e Tests
+
+### Steps to Clone Repositary
 
 1. **Clone the Repository:**
     ```bash
-    git clone https://github.com/Lubka93/pantheon_option1.git
-    ```
+    git clone https://github.com/Lubka93/EEA---automation.git
 
 2. **Navigate to the Project Directory:**
     ```bash
-    cd pantheon_option1
+    cd EEA---automation
     ```
 
 3. **Install Dependencies:**
@@ -42,16 +59,4 @@ Web app Tour Od Heroes is running locally at localhost. In order to run Tour of 
     npm install
     ```
 
-4. **Run Cypress Tests:**
-    - To open  the Cypress Test Runner:
-        ```bash
-        npm run open
-        ```
-    - To run all tests in headless mode:
-        ```bash
-        npm run runner
-        ```
-    - To run all tests in headed mode:
-        ```bash
-        npm run runnerH
-        ```
+

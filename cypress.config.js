@@ -2,8 +2,8 @@ const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
   retries: {            
-    runMode: 1,
-    openMode: 1,
+    runMode: 0,
+    openMode: 0,
   },
   e2e: {
     setupNodeEvents(on, config) {
@@ -13,10 +13,10 @@ module.exports = defineConfig({
       require('./cypress/support/commands');
     },
     env: {
-      baseURL: 'http://localhost:4200/dashboard',
+      baseURL: 'https://demoqa.com/',
     },
   },
-  pageLoadTimeout: 7000,    
+  pageLoadTimeout: 15000,    
   viewportHeight: 1080,    
   viewportWidth: 1920,
   defaultCommandTimeout: 10000,
@@ -28,7 +28,7 @@ module.exports = defineConfig({
     inlineAssets: true,
     saveAllAttempts: false,
   },
-  video: false, 
+  video: true, 
   screenshotOnRunFailure: true, 
 });
 

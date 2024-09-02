@@ -1,8 +1,37 @@
 {
-    "topHeroesDataSet": ["Bombasto", "Celeritas", "Magneta", "RubberMan"],
-    "searchValidInputData": ["Bombasto", "bombasto", "Celeritas", "Magneta", "RubberMan", "Bom", "B", "Man"],
-    "searchInvalidInputData": ["123", "Bombasto123", "   ","?","$Bombasto", "#Bombasto"],             
-    "addValidInputData": ["123", "Bombasto123","?","$Bombasto", "#?", "#$Bombasto"],
-    "addInvalidInputData": ["   ", "        Bombasto"]
-  }
-  
+  "registrationCredentials": [{"firstName": "Lubka", "lastName": "Doe", "userName": "lubka123", "password": "Lubka123@"}],
+  "validLoginCredentials": [{"userName": "lubka123", "password": "Lubka123@"}],
+  "invalidLoginCredentials": [
+    {"userName": "lubka124", "password": "Lubka123@"},
+    {"userName": "lubka123", "password": "Lubka124@"},
+    {"userName": "lubka124", "password": "Lubka124@"},
+    {"userName": "lubka124", "password": "Lubka124@"},
+    {"userName": "lubka123", "password": "Lubk123@"},
+    {"userName": "lubka123", "password": "Lub123@"},
+    {"userName": "lubka123", "password": "Lubka1234"},
+    {"userName": "lubka123", "password": "LubkaLub@"},
+    {"userName": "lubka123", "password": "12345678@"},
+    {"userName": "lubka123lubka123lubka123lubka123lubka123lubka123lubka123lubka123lubka123lubka123lubka123", "password": "Lubka123@"},
+    {"userName": "lubka123", "password": "Lubka123@Lubka123@Lubka123@"},
+    {"userName": "#lubka123", "password": "Lubka123@"}
+  ],
+  "caseSensitiveLoginCredentials": [
+    {"userName": "LUBKA123", "password": "Lubka123@"},
+    {"userName": "LUBKA123", "password": "LUBKA123@"},
+    {"userName": "lubka123", "password": "LUBKA123@"},
+    {"userName": "lubka123", "password": "lubka123@"}
+  ],
+  "loginCredentialsSpacesBefore": [
+    {"userName": " lubka123", "password": "Lubka123@"},
+    {"userName": "lubka123", "password": " Lubka123@"}
+  ],
+  "loginCredentialsSpacesAfter": [
+    {"userName": "lubka123 ", "password": "Lubka123@"},
+    {"userName": "lubka123", "password": "Lubka123@ "}
+  ],
+  "loginCredentialsSpacesMiddle": [
+    {"userName": "lubka 123", "password": "Lubka123@"},
+    {"userName": "lubka123", "password": "Lubka 123@"}
+  ],
+  "nonExistingLoginCredentials": [{"userName": "martina93", "password": "marTina456@"}]
+}
