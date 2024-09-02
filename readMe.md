@@ -26,7 +26,7 @@ I automated all test cases for login functionality from excel file [Login functi
 
 **Report
 -
-The automatically generated test report (using Mochawesome) summarizes all failed tests and includes videos and screenshots. [Report from automation](https://lubka93.github.io/EEA---automation/)
+The automatically generated test report (using Mochawesome) summarizes all failed tests and includes videos and screenshots. [Report from automation](<a href="https://lubka93.github.io/EEA---automation/" target="_blank">EEA Automation</a>)
 
 
 
